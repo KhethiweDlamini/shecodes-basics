@@ -1,2 +1,2 @@
 # shecodes-basics
-For coding exercises completed for the SheCodes Foundation Basics courses
+This repository contains the code I wrote to finish coding exercises that are part of the SheCodes Foundation Basics courses.
