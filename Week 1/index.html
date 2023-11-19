@@ -6,11 +6,52 @@
     <title>SheCodes Basics W1</title>
   </head>
   <style>
+    body {
+      background: #f5f0fe;
+    }
     h1 {
-      color: purple;
-      font-size: 48px;
+      color: #885df1;
       text-decoration: underline;
-      font-weight: lighter;
+      text-align: center;
+    }
+    h2 {
+      color: #272044;
+      text-align: center;
+      font-weight: normal;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 20px;
+      background: transparent;
+      color: #885df1;
+      font-size: 16px;
+      border: 1px solid #885df1;
+      border-radius: 30px;
+      box-shadow: 3px 5px 10px #885df1;
+      transition: all 200ms ease-in-out;
+    }
+    button:hover {
+      background: purple;
+      color: white;
+      cursor: pointer;
+    }
+    li {
+      list-style: none;
+      margin: 0 10px;
+      padding: 0;
+      display: inline;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     .coders {
       color: blue;
@@ -21,9 +62,33 @@
     .stories {
       color: green;
     }
+    p {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 10px auto;
+    }
+    .platform {
+      color: #885df1;
+    }
+    .contact {
+      text-align: center;
+      font-size: 12px;
+    }
+    .info-heading {
+      font-weight: bold;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+    }
   </style>
   <body>
     <h1>SheCodes</h1>
+    <h2>Coding Workshop</h2>
+    <button>Apply Now</button>
     <ul>
       <li>
         <a
@@ -54,11 +119,17 @@
       </li>
     </ul>
     <hr />
-    <p><strong>More Info</strong></p>
+    <div class="info-heading">More Info</div>
     <img
       src="https://opentextbooks.clemson.edu/app/uploads/sites/28/2021/12/coding-black-females.jpg"
       alt="Woman Coding"
       width="300"
     />
+    <div class="contact">
+      <span class="platform">Email:</span>
+      <span>hello@shecodes.io</span>
+      <span class="platform">Instagram:</span>
+      <span>@shecodes.io</span>
+    </div>
   </body>
 </html>
