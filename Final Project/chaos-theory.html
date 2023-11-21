@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaos Theory</title>
+  </head>
+  <style>
+    body {
+      background: #000;
+      font-family: Garamond, serif;
+    }
+    div {
+      width: 50%;
+      margin: 30px auto;
+      padding: 30px;
+      background: linear-gradient(
+        178.6deg,
+        rgb(232, 245, 253) 3.3%,
+        rgb(252, 253, 255) 109.6%
+      );
+      border-radius: 10px;
+    }
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      border: 1px solid #000;
+      border-radius: 10px;
+    }
+
+    .small-text {
+      font-style: italic;
+      font-size: 30px;
+      font-weight: lighter;
+    }
+    .big-text {
+      font-style: bold;
+      font-size: 28px;
+      font-weight: bolder;
+    }
+
+    hr {
+      border: 0.5px dashed #000;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 70%;
+      border-radius: 30px;
+    }
+
+    p,
+    a {
+      line-height: 1.5;
+      font-size: 30px;
+    }
+    .mylinks {
+      text-decoration: none;
+      font-size: 26px;
+      color: #8606fe;
+    }
+    .mylinks:hover {
+      text-decoration: underline;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 20px 20px;
+      font-size: 30px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 3px 3px 10px 5px #ffc0cb;
+      border-radius: 30px;
+      background: #f4dede;
+      transition: all 200ms ease;
+    }
+    button:hover {
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Chaos Theory 🦋</h1>
+      <h2>
+        <span class="small-text">Small Actions.</span>
+        <span class="big-text">Massive Consequences</span>
+      </h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/659/original/image_processing20210201-18089-lp24mi.gif?1700583857"
+        alt="Lorenz Attractor"
+      />
+      <hr />
+      <p>
+        <strong>Chaos theory</strong> is a branch of mathematics and physics
+        that deals with complex systems whose behavior is highly sensitive to
+        initial conditions. A fundamental concept in chaos theory is the
+        <em>butterfly effect</em>, which suggests that the flap of a butterfly's
+        wings in Brazil could set off a chain of events that leads to a tornado
+        in Texas. This metaphor illustrates the sensitivity to initial
+        conditions in chaotic systems.
+      </p>
+
+      <a
+        class="mylinks"
+        href="https://fractalfoundation.org/resources/what-is-chaos-theory/"
+        target="_blank"
+      >
+        Learn more on Fractal Foundation
+      </a>
+      <br />
+      <button>Lorenz 🦋 Simulator</button>
+    </div>
+    <script>
+      function openSimulator() {
+        let name = prompt("What is your name?");
+        let question = prompt(
+          `Hi ${name}! Do you want to see the Lorenz attractor in action (Yes or No)?`
+        );
+        userAnswer = question.toUpperCase().trim();
+
+        if (userAnswer === "YES" || userAnswer === "Y") {
+          if (
+            window.confirm(
+              `Click OK to be redirected to the simulator. Otherwise Cancel to stay here.`
+            )
+          ) {
+            window.open(
+              "https://itp.uni-frankfurt.de/~gros/Vorlesungen/SO/simulation_example/",
+              "blank"
+            );
+          }
+        } else {
+          alert(`Maybe next time, ${name}! Thanks for dropping by!`);
+        }
+      }
+
+      let simulatorButton = document.querySelector("button");
+      simulatorButton.addEventListener("click", openSimulator);
+    </script>
+  </body>
+</html>
